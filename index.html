@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Стилизация и отправка формы 2.0</title>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form
+          id="my-form"
+          action="https://formspree.io/f/moqzlwpq"
+          method="POST"
+          class="form__body"
+        >
+          <h1 class="form__title">Заполните форму</h1>
+          <p class="form__sub-title">Мы презвоним в ближайшее время</p>
+          <div class="form__item">
+            <label for="formName" class="form__label">Имя*:</label>
+            <input
+              id="formName"
+              type="text"
+              name="name"
+              placeholder="Введите ваше имя"
+              class="form__input"
+              required
+              autocomplete="name"
+            />
+          </div>
+          <div class="form__item">
+            <label for="phone" class="form__label">Телефон*:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="\+?[0-9\s\-\(\)]+"
+              required
+              class="form__input"
+              autocomplete="tel"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Сообщение:</label>
+            <textarea
+              placeholder="Опишите вашу проблему"
+              name="message"
+              id="formMessage"
+              class="form__input"
+            ></textarea>
+          </div>
+          <button id="my-form-button">Отправить</button>
+          <p id="my-form-status"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
